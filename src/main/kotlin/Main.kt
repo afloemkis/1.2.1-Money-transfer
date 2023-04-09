@@ -1,12 +1,10 @@
 fun main(){
-    val minAmount: Int = 3500 //в копейках
+    val minCommission: Int = 3500 //в копейках
     val percent: Double = 0.75
-    val amount: Int = 700000 //в копейках
+    val amount: Int = 10000 //в копейках
 
-    if (amount <= minAmount) {
-        println("Сумма перевода не может быть меньше ${minAmount/100} руб")
-    } else {
         var commission = amount*percent/100
+        if (commission < minCommission) {commission = minCommission.toDouble()}
         println("Сумма комиссии ${commission/100} руб")
-    }
+
 }
